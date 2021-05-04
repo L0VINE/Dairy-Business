@@ -42,4 +42,15 @@ class App {
     const shedB = +inputShedD.value;
     const shedC = +inputShedC.value;
     const shedD = +inputShedD.value;
-
+    if (
+        !validInputs(shedA, shedB, shedC, shedD) ||
+        !allPositive(shedA, shedB, shedC, shedD)
+      )
+        return err();
+  
+      this.#shedMovements.push(
+        +inputShedA.value,
+        +inputShedB.value,
+        +inputShedC.value,
+        +inputShedD.value
+      );
