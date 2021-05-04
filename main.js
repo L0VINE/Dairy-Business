@@ -68,4 +68,21 @@ class App {
         'beforeend',
         `The total production is ${this.daily} litres per day`
       );
-  
+      this._incomeOverTime(this.#sellingPrice, 7);
+      this._incomeOverTime(this.#sellingPrice, 365);
+      this._monthlyReport();
+    }
+    _incomeOverTime(sellingPrice, time) {
+      this.weekly = this.daily * time * sellingPrice;
+      this.yearly = this.daily * time * sellingPrice;
+      if (time === 7)
+        weeklyReport.insertAdjacentHTML(
+          'beforeend',
+          `Your weekly income will be ksh ${this.weekly}`
+        );
+      if (time === 365)
+        yearlyReport.insertAdjacentHTML(
+          'beforeend',
+          `Your yearly income will be ksh ${this.yearly}`
+        );
+    }
