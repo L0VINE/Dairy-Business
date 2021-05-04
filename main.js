@@ -86,3 +86,16 @@ class App {
           `Your yearly income will be ksh ${this.yearly}`
         );
     }
+    _monthlyReport() {
+        const monthly = this.daily * this.#sellingPrice;
+        this.#months.forEach(function (a, i) {
+          const html = `<p>Your income for ${a} is ${
+            monthly * getDaysInMonth(i + 1, 2021)
+          }</p>`;
+          monthlyReport.insertAdjacentHTML('beforeend', html);
+        });
+      }
+    }
+    
+    const app = new App();
+    
