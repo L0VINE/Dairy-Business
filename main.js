@@ -54,3 +54,18 @@ class App {
         +inputShedC.value,
         +inputShedD.value
       );
+      this.daily = this.#shedMovements.reduce((a, b) => a + b, 0);
+      this._renderReports();
+      reports.classList.remove('hidden');
+      container.classList.add('hidden')
+    }
+    _renderReports() {
+      this.#shedMovements.forEach(function (a, i) {
+        const html = `<p>Your production in ${inputLabel[i].textContent} is ${a} litres</p>`;
+        dailyReport.insertAdjacentHTML('beforeend', html);
+      });
+      dailyReport.insertAdjacentHTML(
+        'beforeend',
+        `The total production is ${this.daily} litres per day`
+      );
+  
