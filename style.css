@@ -3,6 +3,7 @@ body{
 background-image: url("./Images/dairy-cattle.jpg");
 background-repeat: no-repeat;
 background-size: cover;
+font-size: 30px;
 }
 :root {
     --color-dark--2: #42484d;
@@ -22,6 +23,25 @@ background-size: cover;
     padding: 3rem 4rem;
     color: rgb(44, 15, 15);
   }
+ .container{
+     height: 100px;
+     width: 70px;
+     margin: 100px;
+ }
+ .form__input{
+     height: 70px;
+     width: 250px;
+     font-size: 50px;
+     border-radius: 10px;
+
+ }
+ button{
+     margin-top: 50px;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(126, 31, 19);
+    border-radius: 10px;
+ }
  
   .report--daily {
     background-image: linear-gradient(to top left, #ffb003, #ffcb03);
