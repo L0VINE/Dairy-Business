@@ -33,3 +33,13 @@ class App {
 
   _totalProduction(evt) {
     evt.preventDefault();
+    const validInputs = (...inputs) =>
+      inputs.every(input => Number.isFinite(input));
+
+    const allPositive = (...inputs) => inputs.every(input => input > 0);
+
+    const shedA = +inputShedD.value;
+    const shedB = +inputShedD.value;
+    const shedC = +inputShedC.value;
+    const shedD = +inputShedD.value;
+
