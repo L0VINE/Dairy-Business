@@ -1,0 +1,27 @@
+:root {
+    --color-dark--2: #42484d;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .reports {
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    color: #333;
+  }
+  
+  .report--daily {
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+  
+  .report--weekly {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+  }
+  
