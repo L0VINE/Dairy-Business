@@ -25,3 +25,11 @@ const getDaysInMonth = function (month, year) {
 class App {
   #sellingPrice = 45;
   #shedMovements = [];
+  #months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  constructor() {
+    btn.addEventListener('click', this._totalProduction.bind(this));
+  }
+
+  _totalProduction(evt) {
+    evt.preventDefault();
